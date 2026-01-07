@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TO-DO</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <main class="container">
+        <div class="punch-hole">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        
+       
+        
+    </div>
+    <div class="top-bar">
+       <h1 class="logo bold">AYONETE'S TO-DO LIST</h1>
+       <p>The goal of this project is to successfully deploy this static page to Azure using a CI/CD pipeline. Right now we are on the first step which is creating a simple static website </p>
+    </div>
+
+        <div class="add-bar">
+            <input type="text" id="new-task" placeholder="Add items...">
+            <ion-icon id="add-button" name="add-circle-outline" class="mg-10 fs-large"></ion-icon>
+        </div>
+        <div class="menu-bar">
+            <div id="check-all-button">
+                <ion-icon name="checkmark-done-outline"></ion-icon>
+                <p id = "completeAll" class="fs-med" >Complete All tasks</p>
+            </div>
+            <p id = "clearComplete" class="fs-med">Clear Completed</p>
+        </div>
+        <hr>
+        <div id = "show-all" class="tasks-container">
+            <div class="task-card not-started" id="t1">
+                <div class="status-icon"></div>
+                <p class="task-text">Create simple static website</p>
+                <p class="task-status color-red">Not-Started</p>
+                <ion-icon class="delete fs-large mg-10" name="close-circle-outline" ></ion-icon>
+            </div>
+            <div class="task-card not-started" id="t2">
+                    <div class="status-icon"></div>
+                    <p class="task-text">Set up Azure account and create storage account for static site hosting</p>
+                    <p class="task-status color-red">Not-Started</p>
+                    <ion-icon class="delete fs-large mg-10" name="close-circle-outline"></ion-icon>
+            </div>
+            <div class="task-card Completed" id="t3">
+                    <div class="status-icon"></div>
+                    <p class="task-text">Manually deploy the site to Azure</p>
+                    <p class="task-status color-green">Completed</p>
+                    <ion-icon class="delete fs-large mg-10" name="close-circle-outline"></ion-icon>
+            </div>
+            <div class="task-card In-progress" id="t4">
+                    <div class="status-icon"></div>
+                    <p class="task-text">Verify it's accessible via public URL</p>
+                    <p class="task-status color-blue">In-progress</p>
+                    <ion-icon class="delete fs-large mg-10" name="close-circle-outline"></ion-icon>
+            </div>
+            <div class="task-card In-progress" id="t5">
+                    <div class="status-icon"></div>
+                    <p class="task-text">Upload the video</p>
+                    <p class="task-status color-blue">In-progress</p>
+                    <ion-icon class="delete fs-large mg-10" name="close-circle-outline"></ion-icon>
+            </div>
+        </div>
+        
+        <hr>
+        <div class="footer">
+            <div class="task-count">
+                <p id="task-left-count" class="fs-med bold">3 </p>&nbsp
+                <p class="fs-med">tasks on List</p>
+            </div>
+            <div class="filter">
+                <p id = 'showAll' class="filter-button">All</p>
+                <p id='showComplete' class="filter-button">Completed</p>
+                <p id='showInprogress' class="filter-button">In-progress</p>
+                <p id='showNotStarted' class="filter-button">Not-started</p>
+            </div>
+        </div>
+    </main>
+    <disclaimer>WARNING: This is a static site with no backend server or database. All your tasks exist only in your browser's memory, so they'll disappear when you refresh the page! I improve on this in the next project and will attach the link when it's done!</disclaimer>
+    <footer>Made with &hearts; by Ayonete</footer>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
